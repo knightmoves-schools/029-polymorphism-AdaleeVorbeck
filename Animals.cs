@@ -4,14 +4,14 @@ public class Trainer
 {
     public string Listen(Animal[] animals)
     {
-        List<string> sounds = new List<string>();
+        string sounds = "";
 
         foreach (Animal animal in animals)
         {
-            sounds.Add(animal.Say());
+            sounds += animal.Say() + ", ";
         }
 
-        return string.Join(", ", sounds);
+        return sounds;
     }
 }
 
